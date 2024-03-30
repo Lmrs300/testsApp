@@ -1,0 +1,135 @@
+.boton-modal {
+  padding: 5px;
+  display: inline-block;
+}
+
+.boton-modal label {
+  padding: 5px 5px;
+
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.boton-modal label:hover {
+  background-color: rgb(197, 1, 1);
+}
+
+#btn-modal {
+  display: none;
+}
+
+.modal-fade {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(144, 148, 150, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+#btn-modal:checked ~ .modal-fade {
+  display: flex;
+}
+
+.modal-contenedor {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+.modal-contenedor header {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.modal-contenedor p {
+  padding: 15px 0px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  user-select: none;
+}
+
+.modal-contenedor .btn-cerrar {
+  width: 100%;
+  margin-top: 15px;
+  display: inline;
+}
+
+.modal-contenedor .btn-cerrar label {
+  padding: 7px 10px;
+  background-color: #5488a3;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  margin-right: 50%;
+  font-weight: bold;
+}
+
+.modal-contenedor .btn-cerrar label:hover {
+  background-color: #185e83;
+}
+
+.boton-eliminar {
+  text-decoration: none;
+}
+
+.boton-eliminar button {
+  margin-top: 15px;
+  font-size: 1em;
+  font-weight: bold;
+  display: inline;
+  position: relative;
+  top: 2px;
+  border: 0;
+  padding: 7px 10px;
+  background-color: rgb(255, 0, 0);
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.boton-eliminar button:hover {
+  background-color: rgb(197, 1, 1);
+}
+
+.boton-eliminar button:disabled {
+  background: rgb(184, 0, 0);
+  cursor: default;
+}
+
+.boton-eliminar a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.cerrar-modal {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media screen and (max-width: 800px) {
+  .modal-contenedor {
+    width: 90%;
+  }
+}

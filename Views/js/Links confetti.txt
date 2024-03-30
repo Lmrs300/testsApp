@@ -1,0 +1,8 @@
+canvas-confetti:
+
+https://www.kirilv.com/canvas-confetti/
+
+
+javascript confetti library:
+
+https://github.com/loonywizard/js-confetti

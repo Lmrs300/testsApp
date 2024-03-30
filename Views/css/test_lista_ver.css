@@ -1,0 +1,79 @@
+.h1_comp {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.4em;
+  user-select: none;
+}
+
+#cont_volver {
+  text-align: center;
+  margin: auto;
+}
+
+.volver button {
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  padding: 7px 10px;
+  background-color: #5488a3;
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.volver button:hover {
+  background-color: #185e83;
+}
+
+#lista_comp {
+  width: 50%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+#lista_comp li {
+  list-style: none;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 15px;
+  user-select: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+#lista_comp li .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#lista_comp li .otro_div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn_evaluar button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #03a9f4;
+}
+
+.btn_evaluar button:hover {
+  background: #0088c7;
+}

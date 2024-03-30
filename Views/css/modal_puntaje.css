@@ -1,0 +1,75 @@
+.modal-fade-punt {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(144, 148, 150, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal-contenedor-punt {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenedor-punt h1 {
+  margin-bottom: 10px;
+  font-size: 1.7em;
+  user-select: none;
+}
+
+.modal-contenedor-punt h2 {
+  font-size: 3em;
+  transition: all 0.3s ease;
+}
+
+.modal-contenedor-punt h2 span {
+  transition: all 0.3s ease;
+}
+
+.modal-contenedor-punt #modal_span_nom {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: auto;
+}
+
+#cont_salir {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.salir {
+  padding: 7px 10px;
+  background-color: #5488a3;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  outline: none;
+  border: none;
+}
+
+.salir:hover {
+  background-color: #185e83;
+}
+
+@media screen and (max-width: 800px) {
+  .modal-contenedor-punt {
+    width: 90%;
+  }
+}

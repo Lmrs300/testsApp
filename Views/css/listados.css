@@ -1,0 +1,227 @@
+body {
+  min-width: 900px;
+  position: relative;
+}
+
+.titulo {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3em;
+  user-select: none;
+}
+
+.agregar {
+  display: block;
+  text-align: center;
+}
+
+.agregar button {
+  margin-top: 20px;
+  padding: 5px 20px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #00cc00;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.agregar button:hover {
+  background: rgb(50, 182, 0);
+}
+
+#tests_ul {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.contenedor_test {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+  overflow: hidden;
+}
+
+table {
+  width: 95%;
+  border-collapse: collapse;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  margin: 20px auto;
+  border-radius: 4px;
+  overflow: hidden;
+  font-size: 1em;
+}
+
+.thead_ver th {
+  border-top: 1px solid #c7c7c7;
+  border-bottom: 1px solid #c7c7c7;
+}
+
+table thead th {
+  padding: 5px 0px;
+  background: blue;
+  border-right: 1px solid #c7c7c7;
+  color: #fff;
+  font-size: 1.05em;
+  user-select: none;
+}
+
+table thead th:last-of-type {
+  border-right: none;
+}
+
+table tbody tr {
+  background-color: white;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3d5;
+}
+
+table tbody tr td {
+  padding: 10px 5px;
+  border-right: 1px solid #c7c7c7;
+}
+
+table tbody tr td:last-of-type {
+  border-right: none;
+}
+
+.editar button {
+  background: rgb(255, 172, 0);
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.editar button:hover {
+  background: rgb(255, 142, 0);
+}
+
+.btn_ver-realizar_test button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #03a9f4;
+}
+
+.btn_ver-realizar_test button:hover {
+  background: #0088c7;
+}
+
+.btn_ver-realizar_test button:disabled {
+  background: #006c9e;
+  cursor: default;
+}
+
+.reporte {
+  margin-left: 60px;
+}
+
+.reporte button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: black;
+  margin-top: 10px;
+}
+
+.reporte button:hover {
+  background: rgb(20, 20, 20);
+}
+
+.cont-exito {
+  max-width: 95%;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+
+.exito {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 3px;
+  font-size: 1em;
+  background: rgba(0, 255, 0, 0.5);
+  border: 2px solid rgb(0, 255, 0);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.exito p {
+  padding: 3px;
+}
+
+.cont-notas {
+  display: block;
+  max-width: 95%;
+  margin: auto;
+}
+
+.notas {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 3px;
+  background: rgba(255, 170, 0, 0.7);
+  border: 2px solid rgb(255, 142, 0);
+  font-size: 1em;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.notas p {
+  padding: 5px;
+}
+
+.cont-error {
+  max-width: 95%;
+  text-align: center;
+  display: none;
+  margin: auto;
+}
+
+.error {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 3px;
+  font-size: 1em;
+  background: rgba(255, 0, 0, 0.5);
+  border: 2px solid rgb(197, 1, 1);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}
+
+.error p {
+  padding: 3px;
+}
