@@ -11,7 +11,7 @@
 		'<h1>TestsApp</h1>
 			
 			<ul>
-			<li><a href="../../pages/tests/test_view.php">Tests</a></li>
+			<li><a href="../../pages/tests/test_view_est.php">Tests</a></li>
 
 			</ul>';
 	} else if ($_SESSION['rol'] == 2) {

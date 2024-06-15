@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2024 a las 03:22:07
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Tiempo de generación: 15-06-2024 a las 09:30:23
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `materias` (
   `id_mat` int(11) NOT NULL,
   `materia` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `materias`
@@ -54,7 +54,7 @@ CREATE TABLE `preguntas` (
   `pregunta` text NOT NULL,
   `tipo_preg` varchar(100) NOT NULL,
   `id_test` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `preguntas`
@@ -69,7 +69,10 @@ INSERT INTO `preguntas` (`id_preg`, `pregunta`, `tipo_preg`, `id_test`) VALUES
 (42, 'dededefrf', 'pregunta corta', 27),
 (43, 'gtgtgtghy', 'pregunta parrafo', 27),
 (44, 'aaaaaa', 'pregunta parrafo', 27),
-(45, 'yhujuhygt', 'pregunta sel mul', 27);
+(45, 'yhujuhygt', 'pregunta sel mul', 27),
+(49, 'dede', 'pregunta corta', 29),
+(50, 'deded', 'pregunta parrafo', 29),
+(51, 'ddede', 'pregunta sel mul', 29);
 
 -- --------------------------------------------------------
 
@@ -82,7 +85,7 @@ CREATE TABLE `puntuaciones_tests` (
   `puntos` float NOT NULL,
   `id_usu` int(11) NOT NULL,
   `id_test` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `puntuaciones_tests`
@@ -91,7 +94,8 @@ CREATE TABLE `puntuaciones_tests` (
 INSERT INTO `puntuaciones_tests` (`id_pun_test`, `puntos`, `id_usu`, `id_test`) VALUES
 (1, 7.5, 2, 15),
 (7, 4, 2, 27),
-(8, 16, 4, 27);
+(8, 16, 4, 27),
+(11, 6.6, 2, 29);
 
 -- --------------------------------------------------------
 
@@ -105,7 +109,7 @@ CREATE TABLE `resp_est` (
   `correcta` tinyint(1) NOT NULL,
   `id_preg` int(11) NOT NULL,
   `id_usu` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `resp_est`
@@ -125,7 +129,10 @@ INSERT INTO `resp_est` (`id_resp_est`, `resp_est`, `correcta`, `id_preg`, `id_us
 (24, 'ynhtbgvrfcd', 1, 42, 4),
 (25, 'efrgvfecd', 1, 43, 4),
 (26, 'bbbbbbb', 1, 44, 4),
-(28, 'gbtvrf', 0, 45, 4);
+(28, 'gbtvrf', 0, 45, 4),
+(36, 'dede', 1, 49, 2),
+(37, 'dede', 1, 50, 2),
+(38, '3', 0, 51, 2);
 
 -- --------------------------------------------------------
 
@@ -138,7 +145,7 @@ CREATE TABLE `resp_radio` (
   `resp_radio` text NOT NULL,
   `seleccionada` tinyint(1) NOT NULL,
   `id_preg` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `resp_radio`
@@ -158,7 +165,10 @@ INSERT INTO `resp_radio` (`id_resp_radio`, `resp_radio`, `seleccionada`, `id_pre
 (20, 'aa', 0, 41),
 (21, 'gbtvrf', 0, 45),
 (22, 'hnybtg', 1, 45),
-(23, 'dededw', 0, 45);
+(23, 'dededw', 0, 45),
+(28, '1', 0, 51),
+(29, '2', 1, 51),
+(30, '3', 0, 51);
 
 -- --------------------------------------------------------
 
@@ -169,7 +179,7 @@ INSERT INTO `resp_radio` (`id_resp_radio`, `resp_radio`, `seleccionada`, `id_pre
 CREATE TABLE `roles` (
   `id_rol` int(11) NOT NULL,
   `rol` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `roles`
@@ -192,7 +202,7 @@ CREATE TABLE `tests` (
   `escala` float NOT NULL,
   `id_mat` int(11) NOT NULL,
   `id_usu` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `tests`
@@ -200,7 +210,8 @@ CREATE TABLE `tests` (
 
 INSERT INTO `tests` (`id_test`, `tema`, `fecha_limite`, `escala`, `id_mat`, `id_usu`) VALUES
 (15, 'Reutilización de código', '2024-03-20', 10, 2, 1),
-(27, 'Agentes inteligentes', '2024-04-04', 20, 1, 3);
+(27, 'Agentes inteligentes', '2024-04-04', 20, 1, 3),
+(29, 'Método Simplex', '2024-06-15', 10, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -214,7 +225,7 @@ CREATE TABLE `usuarios` (
   `ced_usu` varchar(20) NOT NULL,
   `id_rol` int(11) NOT NULL,
   `contra_usu` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuarios`
@@ -302,25 +313,25 @@ ALTER TABLE `materias`
 -- AUTO_INCREMENT de la tabla `preguntas`
 --
 ALTER TABLE `preguntas`
-  MODIFY `id_preg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_preg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 
 --
 -- AUTO_INCREMENT de la tabla `puntuaciones_tests`
 --
 ALTER TABLE `puntuaciones_tests`
-  MODIFY `id_pun_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pun_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `resp_est`
 --
 ALTER TABLE `resp_est`
-  MODIFY `id_resp_est` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_resp_est` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `resp_radio`
 --
 ALTER TABLE `resp_radio`
-  MODIFY `id_resp_radio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_resp_radio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de la tabla `roles`
@@ -332,7 +343,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `tests`
 --
 ALTER TABLE `tests`
-  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_test` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

@@ -32,6 +32,7 @@ $resps_est = $datos->listar_resps_est($_GET['id_test'], $_GET['id_usu']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluar test</title>
+    <link rel="icon" href="../../imgs/logo_UPTAMCA.ico">
     <link rel="stylesheet" href="../../css/general.css">
     <link rel="stylesheet" href="../../css/test_config.css?v=<?php echo (rand()); ?>" />
     <script src="../../js/jquery-3.6.4.min.js"></script>

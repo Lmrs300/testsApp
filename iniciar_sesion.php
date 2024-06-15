@@ -12,7 +12,7 @@ if (isset($_SESSION['rol'])) {
 
     switch ($_SESSION['rol']) {
         case '1':
-            header("location: Views/pages/tests/test_view.php");
+            header("location: Views/pages/tests/test_view_est.php");
             break;
 
         case '2':
@@ -42,7 +42,7 @@ if (isset($_POST["nom_usu"]) && isset($_POST["contra"])) {
 
         switch ($_SESSION['rol']) {
             case '1':
-                header("location: Views/pages/tests/test_view.php");
+                header("location: Views/pages/tests/test_view_est.php");
                 break;
 
             case '2':
@@ -65,7 +65,7 @@ if (isset($_POST["nom_usu"]) && isset($_POST["contra"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <link rel="icon" href="<?php echo URL; ?>Views/imgs/logo.ico">
+    <link rel="icon" href="<?php echo URL; ?>Views/imgs/logo_UPTAMCA.ico">
     <link rel="stylesheet" id="link_general" href="Views/css/general.css">
     <link rel="stylesheet" href="Views/css/iniciar_sesion.css?v=<?php echo (rand()); ?>" />
 

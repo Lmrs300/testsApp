@@ -12,11 +12,33 @@
     }
 </script>
 
-<div class="boton-modal">
-    <label for="btn-modal<?php echo $num ?>">Eliminar</label>
+<style>
+    .boton-modal {
+        width: 100%;
+        background: red;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: all 300ms ease;
+    }
 
-</div>
-</div>
+    .boton-modal:hover {
+        background-color: rgb(197, 1, 1);
+    }
+
+    .boton-modal label {
+        background-color: transparent;
+    }
+
+    .boton-modal label:hover {
+        background-color: transparent;
+    }
+</style>
+<label for="btn-modal<?php echo $num ?>" style="width: 100% ;">
+    <div class="boton-modal">
+        Eliminar
+    </div>
+</label>
 <input type="checkbox" name="btn-modal<?php echo $num ?>" id="btn-modal<?php echo $num ?>" value="1" style="display: none;" onchange="javascript:showContent<?php echo $num ?>()" />
 <div class="modal-fade" id="modal-fade<?php echo $num ?>" style="display: none;">
 
@@ -31,7 +53,7 @@
         </div>
         <label for="btn-modal<?php echo $num ?>" class="cerrar-modal"></label>
 
-        <a href="test_eliminar.php?id_test=<?php echo $row['id_test'] ?>" class="boton-eliminar"><button type="button" <?php echo $row['nom_usu'] != $_SESSION['nombre'] ? "title='No puede eliminar los tests de otro profesor' disabled" : "" ?>>Eliminar</button></a>
+        <a href="test_eliminar.php?id_test=<?php echo $row['id_test'] ?>" class="boton-eliminar"><button type="button">Eliminar</button></a>
     </div>
 
 

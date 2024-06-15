@@ -70,7 +70,7 @@ class Test_controller
 
             $this->tests->set("id_test", $info['id_test']);
             $this->tests->set("id_usu", $info['id_usu']);
-            $this->tests->set("puntos", $info['puntos']);
+            $this->tests->set("puntos", bcdiv($info['puntos'], "1", 1));
             $this->tests->update_punt_test();
 
             echo "Listo";
