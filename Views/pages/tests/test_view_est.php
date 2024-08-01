@@ -24,7 +24,7 @@ $resultados = $datos->listar();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tests</title>
-    <link rel="icon" href="../../imgs/logo_UPTAMCA.ico">
+    <link rel="icon" href="../../imgs/test_logo.ico">
     <link rel="stylesheet" href="../../css/general.css">
     <link rel="stylesheet" href="../../css/listados.css?v=<?php echo (rand()); ?>" />
 </head>

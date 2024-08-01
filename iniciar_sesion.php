@@ -65,7 +65,7 @@ if (isset($_POST["nom_usu"]) && isset($_POST["contra"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
-    <link rel="icon" href="<?php echo URL; ?>Views/imgs/logo_UPTAMCA.ico">
+    <link rel="icon" href="<?php echo URL; ?>Views/imgs/test_logo.ico">
     <link rel="stylesheet" id="link_general" href="Views/css/general.css">
     <link rel="stylesheet" href="Views/css/iniciar_sesion.css?v=<?php echo (rand()); ?>" />
 
@@ -75,7 +75,10 @@ if (isset($_POST["nom_usu"]) && isset($_POST["contra"])) {
 
     <div id="contenedor">
 
-        <img src="Views/imgs/Logo_UPTAMCA.png" id="logo">
+        <div id="img_cont">
+            <img src="Views/imgs/test_logo.png" id="logo">
+        </div>
+
 
         <form action="#" method="post">
 
